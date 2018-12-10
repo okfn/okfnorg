@@ -1,2 +1,6 @@
 [project]
 name = okfn
+
+[servers.ghpages]
+target = ghpages://smth/okfnorg
+default = yes
