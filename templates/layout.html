@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}OKI{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css" />
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+
+    <script type="text/javascript" defer>
+      var myFullpage = new fullpage('#fullpage', {
+          anchors: [
+            'latest',
+            'financial-transparency',
+            'data-infrastructure',
+            'data-literacy',
+            'open-knowledge-network',
+            'open-science-research',
+            'open-dDefinition-open-licensing',
+            'open-government',
+            'open-data-assessment',
+            'open-culture',
+            'open-education',
+            'personal-data'
+          ],
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: [
+            '',
+            'Financial transparency',
+            'Data infrastructure',
+            'Data literacy',
+            'Open Knowledge Network',
+            'Open Science & Research',
+            'Open Definition / Open Licensing',
+            'Open Government',
+            'Open Data Assessment',
+            'Open Culture',
+            'Open Education',
+            'Personal data / MyData'
+
+          ],
+          sectionsColor: [
+            '#61BC30',
+            '#465C84',
+            '#725441',
+            '#1C5F78',
+            '#465C84',
+            '#725441',
+            '#1C5F78',
+            '#465C84',
+            '#725441',
+            '#1C5F78',
+            '#465C84',
+            '#725441'
+          ],
+          autoScrolling: false,
+          slidesNavigation: true,
+          controlArrows: false,
+          afterRender: function () {
+              setInterval(function () {
+                  fullpage_api.moveSlideRight();
+              }, 10000);
+          },
+          licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+      });
+    </script>
+  </body>
+</html>
