@@ -71,45 +71,6 @@
       position: relative;
       z-index: 2;
     }
-
-    .banner-pattern {
-      display: none;
-      @supports (mix-blend-mode: lighten) {
-        display: block;
-        position: absolute;
-        z-index: -1;
-        mix-blend-mode: lighten;
-        left: -20%;
-        right: -20%;
-        top: 0;
-        bottom: 0;
-        overflow: hidden;
-        transform: scaleX(-1);
-
-        svg {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: auto;
-          fill: $blue;
-        }
-      }
-
-      & + .banner-pattern {
-        display: none;
-        @supports (mix-blend-mode: saturation) {
-          display: block;
-          mix-blend-mode: saturation;
-          left: 0;
-          right: 0;
-
-          svg {
-            fill: $red;
-          }
-        }
-      }
-    }
   }
 
   .main {

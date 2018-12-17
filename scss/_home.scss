@@ -1,52 +1,219 @@
+$theme-bg-financial: #465C84;
+$theme-bg-infrastructure: #725441;
+$theme-bg-literacy: #1C5F78;
+$theme-bg-network: #009B4D;
+$theme-bg-science: #3F5D6A;
+$theme-bg-licensing: #86622E;
+$theme-bg-government: #7F5362;
+$theme-bg-assessment: #7A703B;
+$theme-bg-culture: #48745A;
+$theme-bg-education: #17405E;
+$theme-bg-personal: #2E3548;
+
+@mixin theme_banner_colour ($bg) {
+
+  .banner::after {
+    background: rgba( $bg, 0.7 );
+    // @supports (mix-blend-mode: darken) {
+    //   background: linear-gradient(to bottom,
+    //   rgba( $bg, 0.7 ) 0%,
+    //   rgba( $bg, 0 ) 100%);
+    // }
+  }
+
+  label[for="search"] {
+    .icon-search {
+      color: $bg;
+    }
+  }
+}
+
 .home-template {
 
-  .site-header {
-    @media (max-height: 768px) {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+  @include theme_banner_colour($brand-primary);
 
-      .banner {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
+  .site-header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: transparent;
+
+    label[for="search"] {
+      .icon-search {
+        transition: color 0.5s ease;
+      }
+    }
+  }
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+    background-color: $brand-primary;
+    color: #fff;
+
+    @media (min-width: $screen-sm-min) {
+      // bg image
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.2;
+        background-size: cover;
+        background-position: center;
+        mix-blend-mode: overlay;
       }
     }
 
-    .banner {
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
 
-      h1, h2 {
-        font-size: 3.5em;
-        font-weight: 900;
+    .inner {
+      width: percentage((10 / $grid-columns));
+    }
+
+    h1, h2 {
+      font-size: 3.5em;
+      font-weight: 900;
+    }
+
+    .btn {
+      font-weight: 600;
+      padding: 0.6em 1.5em;
+      margin-top: 1em;
+      @include button-variant($brand-primary, #fff, #fff);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+
+      .btn {
+        font-size: 2rem;
       }
+    }
 
-      @media (min-width: $screen-sm-min) {
-        font-size: 20px;
-      }
+    @media (min-width: $screen-md-min) {
+      font-size: 22px;
 
-      @media (min-width: $screen-md-min) {
-        font-size: 22px;
+      .container {
         padding-top: $grid-gutter-width*3;
       }
 
-      @media (min-width: $screen-lg-min) {
-        font-size: 26px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 26px;
+    }
+
+    .banner-pattern {
+      left: 0;
+      right: -40%;
+      transform: scaleX(1);
+      z-index: 1;
+      width: 100%;
+
+      svg {
+        bottom: -12vw;
       }
 
-      .banner-pattern {
-        left: 0;
-        right: -40%;
-        transform: scaleX(1);
-
+      & + .banner-pattern {
         svg {
-          bottom: -12vw;
+          bottom: 0;
         }
+      }
+    }
 
-        & + .banner-pattern {
-          svg {
-            bottom: 0;
-          }
+    .fp-slidesNav.fp-bottom {
+      bottom: 5vh;
+
+      & > ul {
+        @include container-fixed;
+        @media (min-width: $screen-sm-min) {
+          width: $container-sm;
         }
+        @media (min-width: $screen-md-min) {
+          width: $container-md;
+        }
+        @media (min-width: $screen-lg-min) {
+          width: $container-lg;
+        }
+      }
+    }
+
+    @mixin theme-banner ($col, $img) {
+      background-color: $col;
+
+      @if ($img) {
+        &::before {
+          background-image: url($img);
+        }
+      }
+
+      .btn {
+        @include button-variant($col, #fff, #fff);
+      }
+    }
+
+    &[data-anchor='financial-transparency'] {
+      @include theme-banner($theme-bg-financial, "../img/financial-banner.jpg");
+    }
+    &[data-anchor='data-infrastructure'] {
+      @include theme-banner($theme-bg-infrastructure, "../img/infrastructure-banner.jpg");
+    }
+    &[data-anchor='data-literacy'] {
+      @include theme-banner($theme-bg-literacy, "../img/literacy-banner.jpg");
+    }
+    &[data-anchor='open-knowledge-network'] {
+      @include theme-banner($theme-bg-network, null);
+    }
+    &[data-anchor='open-science-research'] {
+      @include theme-banner($theme-bg-science, null);
+    }
+    &[data-anchor='open-definition-open-licensing'] {
+      @include theme-banner($theme-bg-licensing, null);
+    }
+    &[data-anchor='open-government'] {
+      @include theme-banner($theme-bg-government, null);
+    }
+    &[data-anchor='open-data-assessment'] {
+      @include theme-banner($theme-bg-assessment, null);
+    }
+    &[data-anchor='open-culture'] {
+      @include theme-banner($theme-bg-culture, null);
+    }
+    &[data-anchor='open-education'] {
+      @include theme-banner($theme-bg-education, null);
+    }
+    &[data-anchor='personal-data'] {
+      @include theme-banner($theme-bg-personal, null);
+    }
+  }
+
+  .fp-section {
+    &::after {
+      // header protect
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      //mix-blend-mode: luminosity;
+      mix-blend-mode: darken;
+
+      height: 120px;
+      @media (min-width: $screen-md-min) {
+        height: 150px;
       }
     }
   }
@@ -275,4 +442,157 @@
       color: inherit;
     }
   }
+
+  &.fp-viewing-financial-transparency,
+  &.fp-viewing-data-infrastructure,
+  &.fp-viewing-data-literacy,
+  &.fp-viewing-open-knowledge-network,
+  &.fp-viewing-open-science-research,
+  &.fp-viewing-open-definition-open-licensing,
+  &.fp-viewing-open-government,
+  &.fp-viewing-open-data-assessment,
+  &.fp-viewing-open-culture,
+  &.fp-viewing-open-education,
+  &.fp-viewing-personal-data {
+    @media (min-width: $screen-sm-min) {
+      #fp-nav.fp-right {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  @mixin fp-viewing-colour ($col) {
+    @include theme_banner_colour($col);
+
+    #fp-nav ul li .fp-tooltip {
+      color: $col;
+    }
+  }
+
+  &.fp-viewing-financial-transparency {
+    @include fp-viewing-colour($theme-bg-financial);
+  }
+  &.fp-viewing-data-infrastructure {
+    @include fp-viewing-colour($theme-bg-infrastructure);
+  }
+  &.fp-viewing-data-literacy {
+    @include fp-viewing-colour($theme-bg-literacy);
+  }
+  &.fp-viewing-open-knowledge-network {
+    @include fp-viewing-colour($theme-bg-network);
+  }
+  &.fp-viewing-open-science-research {
+    @include fp-viewing-colour($theme-bg-science);
+  }
+  &.fp-viewing-open-definition-open-licensing {
+    @include fp-viewing-colour($theme-bg-licensing);
+  }
+  &.fp-viewing-open-government {
+    @include fp-viewing-colour($theme-bg-government);
+  }
+  &.fp-viewing-open-data-assessment {
+    @include fp-viewing-colour($theme-bg-assessment);
+  }
+  &.fp-viewing-open-culture {
+    @include fp-viewing-colour($theme-bg-culture);
+  }
+  &.fp-viewing-open-education {
+    @include fp-viewing-colour($theme-bg-education);
+  }
+  &.fp-viewing-personal-data {
+    @include fp-viewing-colour($theme-bg-personal);
+  }
+  &.fp-viewing-footer {
+    @include fp-viewing-colour(#333);
+    .fp-section::after {
+      mix-blend-mode: normal;
+    }
+  }
+
+  #fp-nav.fp-right {
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+
+    & > ul {
+      @include container-fixed;
+      @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+      }
+      @media (min-width: $screen-md-min) {
+        width: $container-md;
+      }
+      @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+      }
+
+      li {
+        margin-left: percentage((11 / $grid-columns));
+        float: right;
+
+        span {
+          pointer-events: auto;
+        }
+
+        &:first-child {
+          visibility: hidden;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+
+      .fp-tooltip {
+        background-color: #fff;
+        font-weight: 600;
+        color: $brand-primary;
+        border-radius: $border-radius-base;
+        padding: 0.2em 0.5em;
+        top: -4px;
+        max-width: $container-sm;
+      }
+    }
+  }
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  width: 16px;
+  height: 16px;
+
+  a {
+    span {
+      background-color: rgba( #fff, 0 );
+      border: solid 2px #fff;
+    }
+
+    &.active {
+      span {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.fp-slidesNav ul li {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  left: 0;
+  top: 0;
 }
