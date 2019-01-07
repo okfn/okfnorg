@@ -2,5 +2,5 @@
 name = okfn
 
 [servers.ghpages]
-target = ghpages://smth/okfnorg
+target = ghpages://okfn/okfnorg
 default = yes
