@@ -6318,46 +6318,68 @@ button.close {
     mix-blend-mode: overlay; }
   .theme-financial .site-header {
     background-color: #465C84; }
+    .theme-financial .site-header .icon-search {
+      color: #465C84; }
     .theme-financial .site-header::after {
       background-image: url("../img/financial-banner.jpg"); }
   .theme-infrastructure .site-header {
     background-color: #725441; }
+    .theme-infrastructure .site-header .icon-search {
+      color: #725441; }
     .theme-infrastructure .site-header::after {
       background-image: url("../img/infrastructure-banner.jpg"); }
   .theme-literacy .site-header {
     background-color: #1C5F78; }
+    .theme-literacy .site-header .icon-search {
+      color: #1C5F78; }
     .theme-literacy .site-header::after {
       background-image: url("../img/literacy-banner.jpg"); }
   .theme-network .site-header {
     background-color: #009B4D; }
+    .theme-network .site-header .icon-search {
+      color: #009B4D; }
     .theme-network .site-header::after {
       background-image: url("../img/network-banner.jpg"); }
   .theme-science .site-header {
     background-color: #3F5D6A; }
+    .theme-science .site-header .icon-search {
+      color: #3F5D6A; }
     .theme-science .site-header::after {
       background-image: url("../img/science-banner.jpg"); }
   .theme-licensing .site-header {
     background-color: #86622E; }
+    .theme-licensing .site-header .icon-search {
+      color: #86622E; }
     .theme-licensing .site-header::after {
       background-image: url("../img/definition-banner.jpg"); }
   .theme-government .site-header {
     background-color: #7F5362; }
+    .theme-government .site-header .icon-search {
+      color: #7F5362; }
     .theme-government .site-header::after {
       background-image: url("../img/government-banner.jpg"); }
   .theme-assessment .site-header {
     background-color: #7A703B; }
+    .theme-assessment .site-header .icon-search {
+      color: #7A703B; }
     .theme-assessment .site-header::after {
       background-image: url("../img/assessment-banner.jpg"); }
   .theme-culture .site-header {
     background-color: #48745A; }
+    .theme-culture .site-header .icon-search {
+      color: #48745A; }
     .theme-culture .site-header::after {
       background-image: url("../img/culture-banner.jpg"); }
   .theme-education .site-header {
     background-color: #17405E; }
+    .theme-education .site-header .icon-search {
+      color: #17405E; }
     .theme-education .site-header::after {
       background-image: url("../img/education-banner.jpg"); }
   .theme-personal .site-header {
     background-color: #2E3548; }
+    .theme-personal .site-header .icon-search {
+      color: #2E3548; }
     .theme-personal .site-header::after {
       background-image: url("../img/personal-banner.jpg"); }
 
