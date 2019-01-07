@@ -1,5 +1,5 @@
 .page-template,
-[class$="-template"] {
+[class*="-template"] {
   overflow-x: hidden;
 
   .banner {

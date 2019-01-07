@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css" />
     <link rel="stylesheet" href="{{ '/css/style.css'|url }}">
   </head>
-  <body class="{{ this._model }}-template">
+  <body class="{{ this._model }}-template {% block bodyclass %}{% endblock %}">
     <header class="site-header">
     {% include 'includes/header.html' %}
     {% block body %}{% endblock %}

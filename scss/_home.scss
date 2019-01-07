@@ -1,15 +1,3 @@
-$theme-bg-financial: #465C84;
-$theme-bg-infrastructure: #725441;
-$theme-bg-literacy: #1C5F78;
-$theme-bg-network: #009B4D;
-$theme-bg-science: #3F5D6A;
-$theme-bg-licensing: #86622E;
-$theme-bg-government: #7F5362;
-$theme-bg-assessment: #7A703B;
-$theme-bg-culture: #48745A;
-$theme-bg-education: #17405E;
-$theme-bg-personal: #2E3548;
-
 @mixin theme_banner_colour ($bg) {
 
   .banner::after {

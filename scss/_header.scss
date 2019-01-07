@@ -248,6 +248,90 @@
     }
   }
   @include header-colour;
+
+  // themes
+  body[class*="theme-"] & {
+    &::after {
+      // bg image
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      opacity: 0.2;
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: overlay;
+    }
+  }
+  .theme-financial & {
+    background-color: $theme-bg-financial;
+    &::after {
+      background-image: url("../img/financial-banner.jpg");
+    }
+  }
+  .theme-infrastructure & {
+    background-color: $theme-bg-infrastructure;
+    &::after {
+      background-image: url("../img/infrastructure-banner.jpg");
+    }
+  }
+  .theme-literacy & {
+    background-color: $theme-bg-literacy;
+    &::after {
+      background-image: url("../img/literacy-banner.jpg");
+    }
+  }
+  .theme-network & {
+    background-color: $theme-bg-network;
+    &::after {
+      background-image: url("../img/network-banner.jpg");
+    }
+  }
+  .theme-science & {
+    background-color: $theme-bg-science;
+    &::after {
+      background-image: url("../img/science-banner.jpg");
+    }
+  }
+  .theme-licensing & {
+    background-color: $theme-bg-licensing;
+    &::after {
+      background-image: url("../img/definition-banner.jpg");
+    }
+  }
+  .theme-government & {
+    background-color: $theme-bg-government;
+    &::after {
+      background-image: url("../img/government-banner.jpg");
+    }
+  }
+  .theme-assessment & {
+    background-color: $theme-bg-assessment;
+    &::after {
+      background-image: url("../img/assessment-banner.jpg");
+    }
+  }
+  .theme-culture & {
+    background-color: $theme-bg-culture;
+    &::after {
+      background-image: url("../img/culture-banner.jpg");
+    }
+  }
+  .theme-education & {
+    background-color: $theme-bg-education;
+    &::after {
+      background-image: url("../img/education-banner.jpg");
+    }
+  }
+  .theme-personal & {
+    background-color: $theme-bg-personal;
+    &::after {
+      background-image: url("../img/personal-banner.jpg");
+    }
+  }
 }
 
 .banner-pattern {

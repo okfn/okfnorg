@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
+{% if this.theme %}{% block bodyclass %}theme-{{ this.theme }}{% endblock %}{% endif %}
 {% block body %}
   <div class="banner">
     {% include 'includes/banner-pattern.html' %}
