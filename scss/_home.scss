@@ -173,28 +173,28 @@ $theme-bg-personal: #2E3548;
       @include theme-banner($theme-bg-literacy, "../img/literacy-banner.jpg");
     }
     &[data-anchor='open-knowledge-network'] {
-      @include theme-banner($theme-bg-network, null);
+      @include theme-banner($theme-bg-network, "../img/network-banner.jpg");
     }
     &[data-anchor='open-science-research'] {
-      @include theme-banner($theme-bg-science, null);
+      @include theme-banner($theme-bg-science, "../img/science-banner.jpg");
     }
     &[data-anchor='open-definition-open-licensing'] {
-      @include theme-banner($theme-bg-licensing, null);
+      @include theme-banner($theme-bg-licensing, "../img/definition-banner.jpg");
     }
     &[data-anchor='open-government'] {
-      @include theme-banner($theme-bg-government, null);
+      @include theme-banner($theme-bg-government, "../img/government-banner.jpg");
     }
     &[data-anchor='open-data-assessment'] {
-      @include theme-banner($theme-bg-assessment, null);
+      @include theme-banner($theme-bg-assessment, "../img/assessment-banner.jpg");
     }
     &[data-anchor='open-culture'] {
-      @include theme-banner($theme-bg-culture, null);
+      @include theme-banner($theme-bg-culture, "../img/culture-banner.jpg");
     }
     &[data-anchor='open-education'] {
-      @include theme-banner($theme-bg-education, null);
+      @include theme-banner($theme-bg-education, "../img/education-banner.jpg");
     }
     &[data-anchor='personal-data'] {
-      @include theme-banner($theme-bg-personal, null);
+      @include theme-banner($theme-bg-personal, "../img/personal-banner.jpg");
     }
   }
 
