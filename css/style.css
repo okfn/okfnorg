@@ -6304,6 +6304,62 @@ button.close {
       border-bottom-color: #fff; }
     .site-header .search-bar .container .buttons button.cancel {
       box-shadow: inset 0px 0px 0px 2px #fff; }
+  body[class*="theme-"] .site-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.2;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: overlay; }
+  .theme-financial .site-header {
+    background-color: #465C84; }
+    .theme-financial .site-header::after {
+      background-image: url("../img/financial-banner.jpg"); }
+  .theme-infrastructure .site-header {
+    background-color: #725441; }
+    .theme-infrastructure .site-header::after {
+      background-image: url("../img/infrastructure-banner.jpg"); }
+  .theme-literacy .site-header {
+    background-color: #1C5F78; }
+    .theme-literacy .site-header::after {
+      background-image: url("../img/literacy-banner.jpg"); }
+  .theme-network .site-header {
+    background-color: #009B4D; }
+    .theme-network .site-header::after {
+      background-image: url("../img/network-banner.jpg"); }
+  .theme-science .site-header {
+    background-color: #3F5D6A; }
+    .theme-science .site-header::after {
+      background-image: url("../img/science-banner.jpg"); }
+  .theme-licensing .site-header {
+    background-color: #86622E; }
+    .theme-licensing .site-header::after {
+      background-image: url("../img/definition-banner.jpg"); }
+  .theme-government .site-header {
+    background-color: #7F5362; }
+    .theme-government .site-header::after {
+      background-image: url("../img/government-banner.jpg"); }
+  .theme-assessment .site-header {
+    background-color: #7A703B; }
+    .theme-assessment .site-header::after {
+      background-image: url("../img/assessment-banner.jpg"); }
+  .theme-culture .site-header {
+    background-color: #48745A; }
+    .theme-culture .site-header::after {
+      background-image: url("../img/culture-banner.jpg"); }
+  .theme-education .site-header {
+    background-color: #17405E; }
+    .theme-education .site-header::after {
+      background-image: url("../img/education-banner.jpg"); }
+  .theme-personal .site-header {
+    background-color: #2E3548; }
+    .theme-personal .site-header::after {
+      background-image: url("../img/personal-banner.jpg"); }
 
 .banner-pattern {
   display: none;
@@ -6700,6 +6756,8 @@ html {
         background-color: #1C5F78; }
   .home-template .banner[data-anchor='open-knowledge-network'] {
     background-color: #009B4D; }
+    .home-template .banner[data-anchor='open-knowledge-network']::before {
+      background-image: url("../img/network-banner.jpg"); }
     .home-template .banner[data-anchor='open-knowledge-network'] .btn {
       color: #009B4D;
       background-color: #fff;
@@ -6738,6 +6796,8 @@ html {
         background-color: #009B4D; }
   .home-template .banner[data-anchor='open-science-research'] {
     background-color: #3F5D6A; }
+    .home-template .banner[data-anchor='open-science-research']::before {
+      background-image: url("../img/science-banner.jpg"); }
     .home-template .banner[data-anchor='open-science-research'] .btn {
       color: #3F5D6A;
       background-color: #fff;
@@ -6776,6 +6836,8 @@ html {
         background-color: #3F5D6A; }
   .home-template .banner[data-anchor='open-definition-open-licensing'] {
     background-color: #86622E; }
+    .home-template .banner[data-anchor='open-definition-open-licensing']::before {
+      background-image: url("../img/definition-banner.jpg"); }
     .home-template .banner[data-anchor='open-definition-open-licensing'] .btn {
       color: #86622E;
       background-color: #fff;
@@ -6814,6 +6876,8 @@ html {
         background-color: #86622E; }
   .home-template .banner[data-anchor='open-government'] {
     background-color: #7F5362; }
+    .home-template .banner[data-anchor='open-government']::before {
+      background-image: url("../img/government-banner.jpg"); }
     .home-template .banner[data-anchor='open-government'] .btn {
       color: #7F5362;
       background-color: #fff;
@@ -6852,6 +6916,8 @@ html {
         background-color: #7F5362; }
   .home-template .banner[data-anchor='open-data-assessment'] {
     background-color: #7A703B; }
+    .home-template .banner[data-anchor='open-data-assessment']::before {
+      background-image: url("../img/assessment-banner.jpg"); }
     .home-template .banner[data-anchor='open-data-assessment'] .btn {
       color: #7A703B;
       background-color: #fff;
@@ -6890,6 +6956,8 @@ html {
         background-color: #7A703B; }
   .home-template .banner[data-anchor='open-culture'] {
     background-color: #48745A; }
+    .home-template .banner[data-anchor='open-culture']::before {
+      background-image: url("../img/culture-banner.jpg"); }
     .home-template .banner[data-anchor='open-culture'] .btn {
       color: #48745A;
       background-color: #fff;
@@ -6928,6 +6996,8 @@ html {
         background-color: #48745A; }
   .home-template .banner[data-anchor='open-education'] {
     background-color: #17405E; }
+    .home-template .banner[data-anchor='open-education']::before {
+      background-image: url("../img/education-banner.jpg"); }
     .home-template .banner[data-anchor='open-education'] .btn {
       color: #17405E;
       background-color: #fff;
@@ -6966,6 +7036,8 @@ html {
         background-color: #17405E; }
   .home-template .banner[data-anchor='personal-data'] {
     background-color: #2E3548; }
+    .home-template .banner[data-anchor='personal-data']::before {
+      background-image: url("../img/personal-banner.jpg"); }
     .home-template .banner[data-anchor='personal-data'] .btn {
       color: #2E3548;
       background-color: #fff;
@@ -7411,51 +7483,51 @@ html {
   top: 0; }
 
 .page-template,
-[class$="-template"] {
+[class*="-template"] {
   overflow-x: hidden; }
   .page-template .banner,
-  [class$="-template"] .banner {
+  [class*="-template"] .banner {
     padding-top: 30px;
     padding-bottom: 30px; }
     @media (min-width: 992px) {
       .page-template .banner,
-      [class$="-template"] .banner {
+      [class*="-template"] .banner {
         padding-top: 50px;
         padding-bottom: 50px; } }
     .page-template .banner h2, .page-template .banner h1,
-    [class$="-template"] .banner h2,
-    [class$="-template"] .banner h1 {
+    [class*="-template"] .banner h2,
+    [class*="-template"] .banner h1 {
       font-size: 42px;
       margin: 0;
       font-weight: 900;
       color: inherit; }
     .page-template .banner p,
-    [class$="-template"] .banner p {
+    [class*="-template"] .banner p {
       font-size: 20px;
       margin: 0.1em 0 0 0;
       color: rgba(255, 255, 255, 0.8); }
     .page-template .banner .btn,
-    [class$="-template"] .banner .btn {
+    [class*="-template"] .banner .btn {
       color: #56A329;
       background-color: #fff;
       border-color: #fff; }
       .page-template .banner .btn:focus, .page-template .banner .btn.focus,
-      [class$="-template"] .banner .btn:focus,
-      [class$="-template"] .banner .btn.focus {
+      [class*="-template"] .banner .btn:focus,
+      [class*="-template"] .banner .btn.focus {
         color: #56A329;
         background-color: #e6e5e5;
         border-color: #bfbfbf; }
       .page-template .banner .btn:hover,
-      [class$="-template"] .banner .btn:hover {
+      [class*="-template"] .banner .btn:hover {
         color: #56A329;
         background-color: #e6e5e5;
         border-color: #e0e0e0; }
       .page-template .banner .btn:active, .page-template .banner .btn.active,
       .open > .page-template .banner .btn.dropdown-toggle,
-      [class$="-template"] .banner .btn:active,
-      [class$="-template"] .banner .btn.active,
+      [class*="-template"] .banner .btn:active,
+      [class*="-template"] .banner .btn.active,
       .open >
-      [class$="-template"] .banner .btn.dropdown-toggle {
+      [class*="-template"] .banner .btn.dropdown-toggle {
         color: #56A329;
         background-color: #e6e5e5;
         border-color: #e0e0e0; }
@@ -7463,76 +7535,76 @@ html {
         .open > .page-template .banner .btn.dropdown-toggle:hover,
         .open > .page-template .banner .btn.dropdown-toggle:focus,
         .open > .page-template .banner .btn.dropdown-toggle.focus,
-        [class$="-template"] .banner .btn:active:hover,
-        [class$="-template"] .banner .btn:active:focus,
-        [class$="-template"] .banner .btn:active.focus,
-        [class$="-template"] .banner .btn.active:hover,
-        [class$="-template"] .banner .btn.active:focus,
-        [class$="-template"] .banner .btn.active.focus,
+        [class*="-template"] .banner .btn:active:hover,
+        [class*="-template"] .banner .btn:active:focus,
+        [class*="-template"] .banner .btn:active.focus,
+        [class*="-template"] .banner .btn.active:hover,
+        [class*="-template"] .banner .btn.active:focus,
+        [class*="-template"] .banner .btn.active.focus,
         .open >
-        [class$="-template"] .banner .btn.dropdown-toggle:hover,
+        [class*="-template"] .banner .btn.dropdown-toggle:hover,
         .open >
-        [class$="-template"] .banner .btn.dropdown-toggle:focus,
+        [class*="-template"] .banner .btn.dropdown-toggle:focus,
         .open >
-        [class$="-template"] .banner .btn.dropdown-toggle.focus {
+        [class*="-template"] .banner .btn.dropdown-toggle.focus {
           color: #56A329;
           background-color: #d4d4d4;
           border-color: #bfbfbf; }
       .page-template .banner .btn:active, .page-template .banner .btn.active,
       .open > .page-template .banner .btn.dropdown-toggle,
-      [class$="-template"] .banner .btn:active,
-      [class$="-template"] .banner .btn.active,
+      [class*="-template"] .banner .btn:active,
+      [class*="-template"] .banner .btn.active,
       .open >
-      [class$="-template"] .banner .btn.dropdown-toggle {
+      [class*="-template"] .banner .btn.dropdown-toggle {
         background-image: none; }
       .page-template .banner .btn.disabled:hover, .page-template .banner .btn.disabled:focus, .page-template .banner .btn.disabled.focus, .page-template .banner .btn[disabled]:hover, .page-template .banner .btn[disabled]:focus, .page-template .banner .btn[disabled].focus,
       fieldset[disabled] .page-template .banner .btn:hover,
       fieldset[disabled] .page-template .banner .btn:focus,
       fieldset[disabled] .page-template .banner .btn.focus,
-      [class$="-template"] .banner .btn.disabled:hover,
-      [class$="-template"] .banner .btn.disabled:focus,
-      [class$="-template"] .banner .btn.disabled.focus,
-      [class$="-template"] .banner .btn[disabled]:hover,
-      [class$="-template"] .banner .btn[disabled]:focus,
-      [class$="-template"] .banner .btn[disabled].focus,
+      [class*="-template"] .banner .btn.disabled:hover,
+      [class*="-template"] .banner .btn.disabled:focus,
+      [class*="-template"] .banner .btn.disabled.focus,
+      [class*="-template"] .banner .btn[disabled]:hover,
+      [class*="-template"] .banner .btn[disabled]:focus,
+      [class*="-template"] .banner .btn[disabled].focus,
       fieldset[disabled]
-      [class$="-template"] .banner .btn:hover,
+      [class*="-template"] .banner .btn:hover,
       fieldset[disabled]
-      [class$="-template"] .banner .btn:focus,
+      [class*="-template"] .banner .btn:focus,
       fieldset[disabled]
-      [class$="-template"] .banner .btn.focus {
+      [class*="-template"] .banner .btn.focus {
         background-color: #fff;
         border-color: #fff; }
       .page-template .banner .btn .badge,
-      [class$="-template"] .banner .btn .badge {
+      [class*="-template"] .banner .btn .badge {
         color: #fff;
         background-color: #56A329; }
       @media (min-width: 992px) {
         .page-template .banner .btn,
-        [class$="-template"] .banner .btn {
+        [class*="-template"] .banner .btn {
           padding: 10px 16px;
           font-size: 20px;
           line-height: 1.3333333;
           border-radius: 3px; } }
     @media (min-width: 1200px) {
       .page-template .banner,
-      [class$="-template"] .banner {
+      [class*="-template"] .banner {
         padding-top: 60px;
         padding-bottom: 60px; }
         .page-template .banner h2, .page-template .banner h1,
-        [class$="-template"] .banner h2,
-        [class$="-template"] .banner h1 {
+        [class*="-template"] .banner h2,
+        [class*="-template"] .banner h1 {
           font-size: 72px; }
         .page-template .banner p,
-        [class$="-template"] .banner p {
+        [class*="-template"] .banner p {
           font-size: 24px;
           margin-top: 0.5em; } }
     .page-template .banner + .plugin_picture,
-    [class$="-template"] .banner + .plugin_picture {
+    [class*="-template"] .banner + .plugin_picture {
       display: none; }
       @supports (mix-blend-mode: overlay) {
         .page-template .banner + .plugin_picture,
-        [class$="-template"] .banner + .plugin_picture {
+        [class*="-template"] .banner + .plugin_picture {
           display: flex;
           position: absolute;
           top: 0;
@@ -7543,42 +7615,42 @@ html {
           align-items: center;
           mix-blend-mode: overlay; }
           .page-template .banner + .plugin_picture img,
-          [class$="-template"] .banner + .plugin_picture img {
+          [class*="-template"] .banner + .plugin_picture img {
             display: block;
             width: 100%; }
             @supports ((-o-object-fit: cover) or (object-fit: cover)) {
               .page-template .banner + .plugin_picture img,
-              [class$="-template"] .banner + .plugin_picture img {
+              [class*="-template"] .banner + .plugin_picture img {
                 height: 100%;
                 -o-object-fit: cover;
                    object-fit: cover; } } }
     .page-template .banner .container,
-    [class$="-template"] .banner .container {
+    [class*="-template"] .banner .container {
       position: relative;
       z-index: 2; }
   .page-template .main,
-  [class$="-template"] .main {
+  [class*="-template"] .main {
     margin-top: 30px;
     margin-bottom: 30px; }
     @media (min-width: 992px) {
       .page-template .main,
-      [class$="-template"] .main {
+      [class*="-template"] .main {
         margin-top: 50px;
         margin-bottom: 50px; } }
     .page-template .main > div,
-    [class$="-template"] .main > div {
+    [class*="-template"] .main > div {
       margin-left: -15px;
       margin-right: -15px; }
       .page-template .main > div:before, .page-template .main > div:after,
-      [class$="-template"] .main > div:before,
-      [class$="-template"] .main > div:after {
+      [class*="-template"] .main > div:before,
+      [class*="-template"] .main > div:after {
         content: " ";
         display: table; }
       .page-template .main > div:after,
-      [class$="-template"] .main > div:after {
+      [class*="-template"] .main > div:after {
         clear: both; }
       .page-template .main > div aside,
-      [class$="-template"] .main > div aside {
+      [class*="-template"] .main > div aside {
         position: relative;
         min-height: 1px;
         padding-left: 15px;
@@ -7586,63 +7658,63 @@ html {
         overflow: hidden; }
         @media (min-width: 992px) {
           .page-template .main > div aside,
-          [class$="-template"] .main > div aside {
+          [class*="-template"] .main > div aside {
             float: left;
             width: 25%; } }
         .page-template .main > div aside #side-nav,
-        [class$="-template"] .main > div aside #side-nav {
+        [class*="-template"] .main > div aside #side-nav {
           width: 100%;
           display: none; }
         .page-template .main > div aside > div,
-        [class$="-template"] .main > div aside > div {
+        [class*="-template"] .main > div aside > div {
           font-size: 14px;
           padding: 20px;
           background-color: #f0f0f0;
           margin-bottom: 30px; }
           .page-template .main > div aside > div > :first-child,
-          [class$="-template"] .main > div aside > div > :first-child {
+          [class*="-template"] .main > div aside > div > :first-child {
             margin-top: 0; }
           .page-template .main > div aside > div > :last-child,
-          [class$="-template"] .main > div aside > div > :last-child {
+          [class*="-template"] .main > div aside > div > :last-child {
             margin-bottom: 0; }
           .page-template .main > div aside > div h3,
-          [class$="-template"] .main > div aside > div h3 {
+          [class*="-template"] .main > div aside > div h3 {
             font-size: 16px;
             font-weight: normal;
             text-transform: uppercase; }
         @media (min-width: 992px) {
           .page-template .main > div aside,
-          [class$="-template"] .main > div aside {
+          [class*="-template"] .main > div aside {
             padding-left: 0; }
             .page-template .main > div aside > div,
-            [class$="-template"] .main > div aside > div {
+            [class*="-template"] .main > div aside > div {
               background-color: transparent; }
             .page-template .main > div aside #side-nav.mm-menu,
-            [class$="-template"] .main > div aside #side-nav.mm-menu {
+            [class*="-template"] .main > div aside #side-nav.mm-menu {
               background-color: #fff;
               height: 30vh;
               position: relative; }
               .page-template .main > div aside #side-nav.mm-menu .mm-prev:before,
-              [class$="-template"] .main > div aside #side-nav.mm-menu .mm-prev:before {
+              [class*="-template"] .main > div aside #side-nav.mm-menu .mm-prev:before {
                 left: 8px;
                 border-color: #61BC30; }
               .page-template .main > div aside #side-nav.mm-menu .mm-navbar,
-              [class$="-template"] .main > div aside #side-nav.mm-menu .mm-navbar {
+              [class*="-template"] .main > div aside #side-nav.mm-menu .mm-navbar {
                 text-align: left;
                 padding: 0 20px;
                 border: none; }
                 .page-template .main > div aside #side-nav.mm-menu .mm-navbar .mm-title,
-                [class$="-template"] .main > div aside #side-nav.mm-menu .mm-navbar .mm-title {
+                [class*="-template"] .main > div aside #side-nav.mm-menu .mm-navbar .mm-title {
                   color: #333;
                   text-transform: uppercase; }
               .page-template .main > div aside #side-nav.mm-menu .mm-listview > li:last-child:after,
-              [class$="-template"] .main > div aside #side-nav.mm-menu .mm-listview > li:last-child:after {
+              [class*="-template"] .main > div aside #side-nav.mm-menu .mm-listview > li:last-child:after {
                 display: none; }
               .page-template .main > div aside #side-nav.mm-menu .mm-listview .mm-next:before,
-              [class$="-template"] .main > div aside #side-nav.mm-menu .mm-listview .mm-next:before {
+              [class*="-template"] .main > div aside #side-nav.mm-menu .mm-listview .mm-next:before {
                 display: none; } }
         .page-template .main > div aside + article,
-        [class$="-template"] .main > div aside + article {
+        [class*="-template"] .main > div aside + article {
           position: relative;
           min-height: 1px;
           padding-left: 15px;
@@ -7654,20 +7726,20 @@ html {
           overflow: hidden; }
           @media (min-width: 992px) {
             .page-template .main > div aside + article,
-            [class$="-template"] .main > div aside + article {
+            [class*="-template"] .main > div aside + article {
               float: left;
               width: 75%; } }
           @media (min-width: 1200px) {
             .page-template .main > div aside + article,
-            [class$="-template"] .main > div aside + article {
+            [class*="-template"] .main > div aside + article {
               float: left;
               width: 66.6666666667%; } }
           @media (min-width: 1200px) {
             .page-template .main > div aside + article,
-            [class$="-template"] .main > div aside + article {
+            [class*="-template"] .main > div aside + article {
               margin-left: 8.3333333333%; } }
           .page-template .main > div aside + article > :first-child,
-          [class$="-template"] .main > div aside + article > :first-child {
+          [class*="-template"] .main > div aside + article > :first-child {
             margin-top: 0; }
 
 .profile {
