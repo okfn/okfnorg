@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <div class="banner">
+    {% include 'includes/banner-pattern.html' %}
+    {% include 'includes/banner-pattern.html' %}
+    <div class="container">
+      <h2>{{ this.title }}</h2>
+      {{ this.blurb }}
+    </div>
+  </div>
+</header>
+<main class="main container">
+  <div>
+    <aside>
+      nav
+    </aside>
+    <article>
+      {{ this.body }}
+    </article>
+  </div>
+</main>
+
+<div class="site-footer">
+  <div class="container">
+    {% include 'includes/footer.html' %}
+  </div>
+</div>
+{% endblock %}
